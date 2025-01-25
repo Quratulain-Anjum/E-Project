@@ -1,0 +1,95 @@
+body {
+   margin: 0;
+   padding: 0;
+ }
+ 
+ .container, .card {
+   margin: 20px;
+ }
+
+ .image1 {
+   width: 100%;
+   height: auto;
+ }
+ 
+ .header h1 {
+   text-align: center;
+   padding: 20px;
+   font-family: 'Times New Roman', Times, serif;
+ }
+ 
+ .card {
+   border-radius: 10px;
+   overflow: hidden;
+ }
+ 
+ .card p {
+   padding: 15px;
+   font-family: 'Arial', sans-serif;
+   font-size: 16px;
+   line-height: 1.6;
+ }
+ 
+ h1 {
+   font-size: 36px;
+   color: #333;
+   padding: 20px 0;
+ }
+ 
+ .text-center {
+   text-align: center;
+ }
+ 
+ @media (max-width: 768px) {
+   .col-md-6 {
+     margin-bottom: 20px;
+   }
+ }
+
+ .hidden
+ {
+   display: none;
+ }
+
+.header
+{
+background:url(M6.jpg);
+background-position:center ;
+background-size: cover;
+height: 400px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.scale:hover
+{
+      transform: scale(1.1);
+      transition: transform 1s ease-in-out;
+}
+/* Set all cards to have the same height */
+.card {
+  height: 100%;
+}
+
+/* Ensure the images have the same height */
+.card-img-top {
+  width: 100%; /* Makes sure images stretch to full width */
+  height: 200px;  /* Adjust the height according to your design */
+  object-fit: cover; /* Ensures image is cropped to fill the space without distortion */
+}
+
+/* Optionally, set the card body height to make cards the same size */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* This ensures the body fills the remaining height */
+  text-align: center;
+}
+.footer
+{
+background-color: #2F3E46;
+width: 100%;
+color: #dad7cd;
+padding: 30px;
+}
