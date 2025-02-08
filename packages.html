@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+  .price
+  {
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(66, 87, 25);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .card-title
+  {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+   /* * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+       .hero {
+            height: 100vh;
+            width: 100%;
+            background-image: #ccc;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            padding: 20px 20px;
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+
+        .logo {
+            color: #aabb8d;
+            font-size: 40px;
+            font-weight: 600;
+            font-family:Arial, Helvetica, sans-serif;
+            
+           
+        }
+
+        span {
+            color: #33441f;
+             font-size: 30px;
+             
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 10px 20px;
+        }
+
+        nav ul li a {
+            color: #283618;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #a3b18a;
+            transition: .3s;
+        }
+
+        button {
+            border: none;
+            border-radius: 3px;
+            background-color: #283618;
+            color: white;
+            padding: 10px 13px;
+            font-weight: bold;
+            font-size: 10px;
+            transition: .4s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }  */
+</style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="" alt=""><h4 class="logo">Crag<span class="span">Culture</span></h4></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="font-size: 20px;"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- row1 -->
+  <div class="container">
+    <div class="row">
+  
+      <div class="card col-4" style="width: 18rem;">
+        <img src="https://images.squarespace-cdn.com/content/v1/5a815ad2e45a7c1f4ef40fb8/1532605992397-SQJ512NRWU905CM1VUUL/k2-banner.jpg?format=2500w" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">K2</h5>
+          <p class="card-text">-Pakistan,Asia 8,611m/28,251ft<br><span class="price">$40,500</span></p>
+          <a href="#" class="btn btn-primary">Book A Trip</a>
+        </div>
+      </div>
+  
+  
+      <div class="card col-4" style="width: 18rem;">
+        <img src="https://media.istockphoto.com/id/183876391/photo/aconcagua.jpg?s=612x612&w=0&k=20&c=KBLoZFvu5OsoJNC08THGBYExbvevBp_yEQJ9FeRHp4g=" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Aconcagua</h5>
+          <p class="card-text">-South America 6,961m/22,837ft<br><span class="price">$25,300</span></p>
+          <a href="#" class="btn btn-primary">Book A Trip</a>
+        </div>
+      </div>
+  
+      
+      <div class="card col-4" style="width: 18rem;">
+        <img src="https://media.istockphoto.com/id/478627080/photo/evening-view-of-ama-dablam.jpg?s=612x612&w=0&k=20&c=GLKvtQt1JVoOB4yR2WI86_fYOmG8WObeZP_QV_gFG_0=" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Amadablam</h5>
+          <p class="card-text">-Nepal,Asia 6,812m/22,349ft<br><span class="price">$12,000</span></p>
+          <a href="#" class="btn btn-primary">Book A Trip</a>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  <!-- row2 -->
+  <div class="container">
+    <div class="row">
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Cho_Oyu%2C_Nepal.jpg/640px-Cho_Oyu%2C_Nepal.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Cho Oyu</h5>
+          <p class="card-text">-China,Asia 8,188m/26,864ft<br><span class="price">$28,000</span></p>
+          <a href="#" class="btn btn-primary">Book A Trip</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Mount_Kilimanjaro_Dec_2009_edit1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Kilimanjaro</h5>
+          <p class="card-text">-Africa 5,895m/19,341ft<br><span class="price">$50,500</span></p>
+          <a href="#" class="btn btn-primary">Book A Trip</a>
+        </div>
+      </div>
+      
+      <div class="card" style="width: 18rem;">
+        <img src="https://nepalnirvanatrails.com/uploads/img/lobuche-peak-everest.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Lobuche East</h5>
+          <p class="card-text">-Nepal,Asia 6,119m/20,075ft<br><span class="price">$38,600</span></p>
+          <a href="#" class="btn btn-primary">Book A Trip</a>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+
+<div class="container">
+  <div class="row">
+    
+  <div class="card col-4" style="width: 18rem;">
+    <img src="https://cdn.britannica.com/17/83817-050-67C814CD/Mount-Everest.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Mount Everest</h5>
+      <p class="card-text">-Asia 8,848.86m/29,032ft<br><span class="price">$80,000</span></p>
+      <a href="#" class="btn btn-primary">Book A Trip</a>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+
+
+</body>
+</html>

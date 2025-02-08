@@ -1,26 +1,52 @@
-body {
+body 
+{
    margin: 0;
    padding: 0;
  }
+ .navbar
+{
+background-color: #8d9cb4;
+position: sticky;
+top: 0;
+left: 0;
+z-index: 1;
+}
+.navbar-brand h4
+{
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:rgba(7, 23, 41, 0.966);
+  font-weight: bold;
+}
  
  .container, .card {
    margin: 20px;
  }
 
  .image1 {
-   width: 100%;
+   max-width: 100%;
    height: auto;
  }
  
+ .header {
+  padding: 40px 0;
+  background-color: #333;
+}
  .header h1 {
    text-align: center;
    padding: 20px;
-   font-family: 'Times New Roman', Times, serif;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  }
  
  .card {
    border-radius: 10px;
    overflow: hidden;
+ }
+
+ .team-cards:hover
+ {
+  transform: scale(1.1);
+  transition:transform 2s ease-in-out;
  }
  
  .card p {
@@ -53,43 +79,139 @@ body {
 
 .header
 {
-background:url(M6.jpg);
+background:url(M5.jpg);
 background-position:center ;
 background-size: cover;
 height: 400px;
 display: flex;
 justify-content: center;
 align-items: center;
+/* overflow: hidden; */
 }
 .scale:hover
 {
       transform: scale(1.1);
       transition: transform 1s ease-in-out;
+      
 }
-/* Set all cards to have the same height */
+
 .card {
   height: 100%;
 }
 
-/* Ensure the images have the same height */
 .card-img-top {
-  width: 100%; /* Makes sure images stretch to full width */
-  height: 200px;  /* Adjust the height according to your design */
-  object-fit: cover; /* Ensures image is cropped to fill the space without distortion */
+  width: 100%; 
+  height: 200px; 
+  object-fit: cover;
 }
 
-/* Optionally, set the card body height to make cards the same size */
 .card-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%; /* This ensures the body fills the remaining height */
+  height: 100%; 
   text-align: center;
 }
-.footer
+.card-img-custom
 {
-background-color: #2F3E46;
-width: 100%;
-color: #dad7cd;
-padding: 30px;
+  width: 200px; height: auto;
 }
+
+/* footer */
+#footer
+{
+  padding: 0 0 30px 0px;
+  color: white;
+  font-size: 14px;
+  background-color: #8d9cb4;
+  margin-top: 100px;
+}
+#footer .footer-top{
+  padding: 60px 0 30px 0;
+  background-color:#8d9cb4;
+  color: white;
+}
+#footer .footer-top .footer-contact{
+  margin-bottom: 30px;
+}
+#footer .footer-top .footer-contact h3{
+  color: rgba(7, 23, 41, 0.966);
+}
+#footer .footer-top .footer-contact h4{
+  font-size: 22px;
+  margin: 0 0 30px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-weight: 700;
+}
+#footer .footer-top .footer-contact p{
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  color: white;
+}
+#footer .footer-top h4{
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 12px;
+}
+#footer .footer-top .footer-links{
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+#footer .footer-top .footer-links h4{
+  color: rgba(7, 23, 41, 0.966);
+}
+#footer .footer-top .footer-links ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#footer .footer-top .footer-links ul li{
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+#footer .footer-top .footer-links ul li a{
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  line-height: 1;
+  font-weight: bold;
+  transition: 0.5s ease;
+}
+#footer .footer-top .footer-links ul li a:hover{
+  color: rgba(7, 23, 41, 0.966);
+}
+#footer .footer-top .socail-links a{
+  font-size: 18px;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #373737;
+  color: white;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  transition: 0.5s ease;
+}
+#footer .footer-top .socail-links a:hover{
+  background-color: rgba(7, 23, 41, 0.966);
+  color: white;
+}
+#footer .copyright{
+  text-align: center;
+  float: left;
+}
+#footer .credits{
+  float: right;
+  text-align: center;
+  font-size: 13px;
+}
+#footer .credits a{
+  color: rgba(7, 23, 41, 0.966);
+}
+/* footer */
