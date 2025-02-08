@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountaineering Adventures</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #2d2a2a;
+        }
+
+
+        .size {
+            height: 400px;
+            width: 100%;
+        }
+
+        .cap-position {
+            position: absolute;
+            top: 35%;
+            animation: 1.8s slideup;
+        }
+
+        @keyframes slideup {
+            from {
+                transform: translateY(20%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0%);
+                opacity: 1;
+            }
+        }
+
+        header {
+            background: #c4c4e2;
+            color: #fff;
+            text-align: center;
+
+        }
+
+        .carousel-item {
+            height: 400px;
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            background: #404e65;
+            margin: 0;
+
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5em 1em;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: #1e3d59;
+            border-radius: 5px;
+        }
+
+        .hero {
+            background: url('pexels-simonmigaj-1081111.jpg') no-repeat center center/cover;
+            color: #171a17;
+            text-align: center;
+            padding: 90px;
+
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+        }
+
+
+        section {
+            padding: 2em 1em;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #about,
+        #contact {
+            background: #ebe7e7;
+            margin: 1em 0;
+            padding: 2em;
+            border-radius: 10px;
+        }
+
+        #trails .trail {
+            background: #eef2f3;
+            padding: 1.5em;
+            margin: 1em 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #trails .trail h3 {
+            margin-top: 0;
+            color: #1e3d59;
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        form label {
+            font-weight: bold;
+        }
+
+        form input,
+        form textarea,
+        form button {
+            padding: 0.8em;
+            font-size: 1em;
+            border: 1px solid #cac1c1;
+            border-radius: 5px;
+        }
+
+        form button {
+            background: #1e3d59;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s;
+            border: none;
+        }
+
+        form button:hover {
+            background: #14233c;
+        }
+
+
+        footer {
+            background: #c1d0de;
+            color: #a68585;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+
+        .flex-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 2em;
+        }
+
+        .card {
+            background: #ece1e1;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: calc(33.333% - 20px);
+            padding: 1em;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 1em;
+        }
+
+        .card h3 {
+            font-size: 1.2em;
+            color: #1e3d59;
+            margin: 0.5em 0;
+        }
+
+        .card p {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+
+        @media (max-width: 768px) {
+            .card {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 100%;
+            }
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+
+        .cardd {
+            position: relative;
+            width: calc(33.333% - 20px);
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cardd img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(1.5px);
+            transform: scale(1.1);
+            transition: transform 0.3s;
+        }
+
+
+        .cardd .card-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+            z-index: 1;
+        }
+
+
+        .cardd:hover img {
+            transform: scale(1.2);
+        }
+
+        .cardd:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+
+        @media (max-width: 768px) {
+            .cardd {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cardd {
+                width: 100%;
+            }
+        }
+
+
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+
+        .fullscreen-carousel {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            display: flex;
+            width: calc(100% * 4);
+            /* Adjust for the number of slides */
+            height: 100%;
+            transition: transform 1s ease-in-out;
+            /* Smooth transition of 1 second */
+        }
+
+        .slide {
+            flex: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        button.prev,
+        button.next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: rgb(169, 156, 127);
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+
+        button.prev {
+            left: 20px;
+        }
+
+        button.next {
+            right: 20px;
+        }
+
+        button.prev:hover,
+        button.next:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .btn-aboutus {
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: #1e3d59;
+            border: none;
+            font-size: 16px;
+            border-radius: 6px;
+            color: rgb(253, 253, 250);
+        }
+
+        .carousel-caption {
+            color: #0a0c0b;
+            font-weight: bolder;
+          
+
+        }
+
+        .h1 {
+            padding-top: 40px;
+            color: #1e2a34;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-decoration: double;
+            text-decoration-color: #a68585;
+
+        }
+
+        .navbar {
+            background-color: #8d9cb4;
+            position: sticky;
+            top: px;
+            left: 0;
+            z-index: 1;
+
+        }
+
+        .navbar-brand h4 {
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgba(7, 23, 41, 0.966);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-md">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <h4>Crag<span
+                            style="font-weight: bold; font-size: 28px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Culture</span>
+                    </h4>
+                </a>
+
+                <a href="" class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span></a>
+
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="homepage.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="index.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</header>
+
+
+
+
+    
+
+
+
+
+
+         
+<div class="container">
+    <!-- Featured Mountain Image -->
+    <img class="ccc" src="contacttt.jpg" alt="Mountain Adventure" class="mountain-image">
+
+    
+    </div>
+
+    <!-- Contact Form -->
+     <section>
+    <div class="contact-form">
+        <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> <b>Send Us a Message</b></h3>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone (Optional)</label>
+            <input type="text" id="phone" name="phone">
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+    
+    <div class="business-hours">
+        <h3>Our Business Hours</h3>
+        <p>We are available during the following hours to assist you with your mountaineering adventures:</p>
+        <p><strong>Monday to Friday:</strong> 9:00 AM - 6:00 PM</p>
+        <p><strong>Saturday:</strong> 10:00 AM - 4:00 PM</p>
+        <p><strong>Sunday:</strong> Closed (We are out on the trails!)</p>
+    </div>
+</div>
+<footer>
+    </footer>
+<style>
+        #map {
+            height: 800px;  /* Adjust the height of the map */
+            width: 200% ;   /* Map will take full width of the container */
+            align-content: center;
+        }
+       
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      
+    }
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color:white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+    .whatsapp-btn {
+      background-color: #25D366;
+      color: white;
+      padding: 15px;
+      width: 100%;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 16px;
+      text-decoration: none;
+      display: block;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .whatsapp-btn:hover {
+      background-color: #128C7E;
+    }
+    .contact-info {
+      margin-top: 30px;
+      text-align: center;
+      color: #000;
+    }
+    .contact-info a {
+      color: #17e964;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contact-form
+    {
+color: black;
+text-align: left;
+
+
+
+    }
+    .wttt{
+height: auto;
+width: 500px;
+
+    }
+    .ccc{
+        height: auto;
+        width: 550px;
+    }
+  </style>
+</head>
+<body>
+ 
+  <div class="container">
+    <h1>Contact Us via WhatsApp</h1>
+    <img class="wttt" src="whatsappp.jpg">
+  <div class="container">
+    <p>If you have any questions or need immediate assistance, feel free to reach out to us directly on WhatsApp. Click the button below to start a conversation:</p>
+     
+
+    <!-- WhatsApp button to open chat -->
+    <a href="https://wa.me/1234567890?text=Hello!%20I%20would%20like%20to%20contact%20you." target="_blank" class="whatsapp-btn">
+      Chat with us on WhatsApp
+    </a>
+    
+    <div class="contact-info">
+      <p>Alternatively, you can contact us through the following methods:</p>
+      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+      <p>Phone: +065483249964</p>
+      <p>We are available 24/7, so don't hesitate to reach out!</p>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+    </style>
+    
+</head>
+<body>
+ <h1>Our Location</h1>
+ </script>
+
+</body>
+</html>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3072.5292714242514!2d-106.04598032513901!3d39.63780160268083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876a5b74eeaf5bbd%3A0xfb7efebc5a19f836!2sAlpine%20Rd%2C%20Colorado%2C%20USA!5e0!3m2!1sen!2s!4v1738748479216!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</style>
+</head>
+<body>
+
+
+        <footer>
+            <p>&copy; 2025 Mountaineering Adventures. All Rights Reserved.</p>
+        </footer>
+
+        <script>
+
+
+
+
+
+
+
+
+        </script>
+
+
+</body>
+
+</html>
